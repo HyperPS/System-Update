@@ -15,7 +15,7 @@
 ## 🧪 VirusTotal Scan Results
 
 - **1.png** & **2.png** show the VirusTotal scan results.
-- Only **2 engines (Google and Kaspersky)** detect it as a generic "agent".
+- Only **2 engines ( Google and IKARUS anti.virus )** detect it as a generic "agent".
 - **Google Play Protect did NOT block** the install or execution.
 
 ![1.png](./1.jpeg)
