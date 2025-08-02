@@ -18,8 +18,8 @@
 - Only **2 engines (Google and Kaspersky)** detect it as a generic "agent".
 - **Google Play Protect did NOT block** the install or execution.
 
-![1.png](./1.png)
-![2.png](./2.png)
+![1.png](./1.jpeg)
+![2.png](./2.jpeg)
 
 > ⚠️ These low detections are **not due to stealth**, but because it’s unknown and simple.
 
